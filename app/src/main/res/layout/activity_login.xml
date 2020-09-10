@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:paddingLeft="12dp"
-    tools:context=".RegisterActivity">
+    tools:context=".activity.RegisterActivity">
 
     <LinearLayout
         android:id="@+id/lay_1"

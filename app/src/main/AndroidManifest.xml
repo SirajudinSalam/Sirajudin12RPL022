@@ -14,17 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AdminActivity"></activity>
-        <activity android:name=".RegisterActivity">
-        </activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomerActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".activity.customer.CustomerActivity" />
+        <activity android:name=".activity.admin.AdminUserActivity" />
     </application>
 
 </manifest>

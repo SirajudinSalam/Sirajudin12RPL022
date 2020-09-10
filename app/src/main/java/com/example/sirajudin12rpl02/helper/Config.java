@@ -1,4 +1,4 @@
-package com.example.sirajudin12rpl02;
+package com.example.sirajudin12rpl02.helper;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -17,13 +17,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.provider.Settings;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.util.ArrayList;
+import com.example.sirajudin12rpl02.activity.LoginActivity;
+
 import java.util.Random;
 
 
@@ -34,7 +34,7 @@ import java.util.Random;
 public final class Config {
     //public static final String BASE_URL = " http://98102f27.ngrok.io/gma5/";
     //public static final String BASE_URL = "http://192.168.43.107/gma5/";
-    public static final String BASE_URL = "http://192.168.43.14/rentalsepedaraju/";
+    public static final String BASE_URL = "http://192.168.6.236/api-rentalsepeda/";
 
     private static final String API = "api/";
     public static final String BASE_URL_API = BASE_URL + API;

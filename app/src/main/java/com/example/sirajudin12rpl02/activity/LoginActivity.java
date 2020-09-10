@@ -1,4 +1,4 @@
-package com.example.sirajudin12rpl02;
+package com.example.sirajudin12rpl02.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +17,11 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.sirajudin12rpl02.activity.admin.AdminUserActivity;
+import com.example.sirajudin12rpl02.helper.Config;
+import com.example.sirajudin12rpl02.activity.customer.CustomerActivity;
+import com.example.sirajudin12rpl02.R;
+import com.example.sirajudin12rpl02.RS;
 
 import org.json.JSONObject;
 
@@ -74,20 +79,20 @@ public class LoginActivity extends AppCompatActivity {
                                     String message = response.optString(Config.RESPONSE_MESSAGE_FIELD);
                                     if (status.equalsIgnoreCase(Config.RESPONSE_STATUS_VALUE_SUCCESS)) {
                                         JSONObject payload = response.optJSONObject(Config.RESPONSE_PAYLOAD_FIELD);
-                                        String U_ID = payload.optString("U_ID");
-                                        String U_NAME = payload.optString("U_NAME");
-                                        String U_PHONE = payload.optString("U_PHONE");
+                                        String U_ID = payload.optString("LOGIN_ID");
+                                        String U_NAME = payload.optString("LOGIN_NAME");
+                                        String U_LOGIN_TOKEN = payload.optString("U_LOGIN_TOKEN");
                                         String U_GROUP_ROLE = payload.optString("GROUP_ROLE");
-                                        String U_EMAIL = payload.optString("U_EMAIL");
+                                        String U_EMAIL = payload.optString("LOGIN_EMAIL");
 
-//                                        preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-//                                        preferences.edit()
-//                                                .putString(Config.LOGIN_ID_SHARED_PREF, U_ID)
-//                                                .putString(Config.LOGIN_NAME_SHARED_PREF, U_NAME)
-//                                                .putString(Config.LOGIN_PHONE_SHARED_PREF, U_PHONE)
-//                                                .putString(Config.LOGIN_GROUP_ID_SHARED_PREF, U_GROUP_ROLE)
-//                                                .putString(Config.LOGIN_EMAIL_SHARED_PREF, U_EMAIL)
-//                                                .apply();
+                                        preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                                        preferences.edit()
+                                                .putString(Config.LOGIN_ID_SHARED_PREF, U_ID)
+                                                .putString(Config.LOGIN_NAME_SHARED_PREF, U_NAME)
+                                                .putString(Config.LOGIN_TOKEN_SHARED_PREF, U_LOGIN_TOKEN)
+                                                .putString(Config.LOGIN_GROUP_ID_SHARED_PREF, U_GROUP_ROLE)
+                                                .putString(Config.LOGIN_EMAIL_SHARED_PREF, U_EMAIL)
+                                                .apply();
 
 
                                             if (U_GROUP_ROLE.equalsIgnoreCase("GR_KONSUMEN")){
@@ -97,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
 //                                                finish();
 //                                                finishAffinity();
                                             }else {
-                                                Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                                                Intent intent = new Intent(LoginActivity.this, AdminUserActivity.class);
                                                 startActivity(intent);
                                                 Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
 //                                                finish();
