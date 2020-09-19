@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    tools:context=".activity.admin.AdminSepedaDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_kode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Sepeda"/>
+
+        <EditText
+            android:id="@+id/et_merk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Merk Sepeda"/>
+
+        <EditText
+            android:id="@+id/et_warna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Warna Sepeda"/>
+
+        <EditText
+            android:id="@+id/et_hargasewa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Harga Sewa"/>
+
+        <ImageView
+            android:id="@+id/iv_uploadsepeda"
+            android:layout_width="match_parent"
+            android:background="#41000000"
+            android:layout_height="160dp"/>
+
+        <Button
+            android:id="@+id/btn_buat"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Update"/>
+    </LinearLayout>
+
+</RelativeLayout>

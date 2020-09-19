@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.sirajudin12rpl02.R;
 
-public class CustomerActivity extends AppCompatActivity {
+public class SepedaDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer);
+        setContentView(R.layout.activity_sepeda_detail);
     }
 }

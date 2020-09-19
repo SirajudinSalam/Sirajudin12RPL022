@@ -1,9 +1,13 @@
 package com.example.sirajudin12rpl02.helper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.sirajudin12rpl02.activity.admin.AdminSepedaDetailActivity;
+import com.example.sirajudin12rpl02.activity.customer.SepedaDetailActivity;
 import com.example.sirajudin12rpl02.model.AdminUserModel;
+import com.example.sirajudin12rpl02.model.SepedaModel;
 
 import org.json.JSONObject;
 
@@ -38,4 +42,59 @@ public final class AppHelper {
 //        context.startActivity(i);
     }
 
+    public static SepedaModel mapAdminSepedaModel(JSONObject rowData) {
+        SepedaModel item = new SepedaModel();
+        item.setUNIT_ID(rowData.optString("UNIT_ID"));
+        item.setUNIT_KODE(rowData.optString("UNIT_KODE"));
+        item.setUNIT_MERK(rowData.optString("UNIT_MERK"));
+        item.setUNIT_WARNA(rowData.optString("UNIT_WARNA"));
+        item.setUNIT_HARGASEWA(rowData.optString("UNIT_HARGASEWA"));
+        item.setUNIT_GAMBAR(rowData.optString("UNIT_GAMBAR"));
+
+
+        return item;
+    }
+
+    public static void goToAdminSepedaDetail(Context context, SepedaModel rowData) {
+        Bundle bundle = new Bundle();
+
+        bundle.putString("UNIT_ID", String.valueOf(rowData.getUNIT_ID()));
+        bundle.putString("UNIT_KODE", rowData.getUNIT_KODE().toUpperCase());
+        bundle.putString("UNIT_MERK", rowData.getUNIT_MERK().toUpperCase());
+        bundle.putString("UNIT_WARNA", rowData.getUNIT_WARNA());
+        bundle.putString("UNIT_HARGASEWA", rowData.getUNIT_HARGASEWA());
+        bundle.putString("UNIT_GAMBAR", rowData.getUNIT_GAMBAR().toUpperCase());
+
+        Intent i = new Intent(context, AdminSepedaDetailActivity.class);
+        i.putExtra("extra_sepeda", rowData);
+        context.startActivity(i);
+    }
+
+    public static SepedaModel mapSepedaModel(JSONObject rowData) {
+        SepedaModel item = new SepedaModel();
+        item.setUNIT_ID(rowData.optString("UNIT_ID"));
+        item.setUNIT_KODE(rowData.optString("UNIT_KODE"));
+        item.setUNIT_MERK(rowData.optString("UNIT_MERK"));
+        item.setUNIT_WARNA(rowData.optString("UNIT_WARNA"));
+        item.setUNIT_HARGASEWA(rowData.optString("UNIT_HARGASEWA"));
+        item.setUNIT_GAMBAR(rowData.optString("UNIT_GAMBAR"));
+
+
+        return item;
+    }
+
+    public static void goToSepedaDetail(Context context, SepedaModel rowData) {
+        Bundle bundle = new Bundle();
+
+        bundle.putString("UNIT_ID", String.valueOf(rowData.getUNIT_ID()));
+        bundle.putString("UNIT_KODE", rowData.getUNIT_KODE().toUpperCase());
+        bundle.putString("UNIT_MERK", rowData.getUNIT_MERK().toUpperCase());
+        bundle.putString("UNIT_WARNA", rowData.getUNIT_WARNA());
+        bundle.putString("UNIT_HARGASEWA", rowData.getUNIT_HARGASEWA());
+        bundle.putString("UNIT_GAMBAR", rowData.getUNIT_GAMBAR().toUpperCase());
+
+        Intent i = new Intent(context, SepedaDetailActivity.class);
+        i.putExtra("extra_sepeda", rowData);
+        context.startActivity(i);
+    }
 }

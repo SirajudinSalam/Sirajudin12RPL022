@@ -17,9 +17,11 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.sirajudin12rpl02.activity.admin.AdminDashboardActivity;
 import com.example.sirajudin12rpl02.activity.admin.AdminUserActivity;
+import com.example.sirajudin12rpl02.activity.customer.DashboardActivity;
 import com.example.sirajudin12rpl02.helper.Config;
-import com.example.sirajudin12rpl02.activity.customer.CustomerActivity;
+import com.example.sirajudin12rpl02.activity.customer.SepedaActivity;
 import com.example.sirajudin12rpl02.R;
 import com.example.sirajudin12rpl02.RS;
 
@@ -96,13 +98,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                             if (U_GROUP_ROLE.equalsIgnoreCase("GR_KONSUMEN")){
-                                                Intent i = new Intent(LoginActivity.this, CustomerActivity.class);
+                                                Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
                                                 startActivity(i);
                                                 Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
 //                                                finish();
 //                                                finishAffinity();
                                             }else {
-                                                Intent intent = new Intent(LoginActivity.this, AdminUserActivity.class);
+                                                Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
                                                 startActivity(intent);
                                                 Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
 //                                                finish();

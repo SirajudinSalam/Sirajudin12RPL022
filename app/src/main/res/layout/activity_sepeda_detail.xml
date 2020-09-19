@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    tools:context=".activity.admin.AdminSepedaDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="KODE SEPEDA"/>
+
+        <TextView
+            android:id="@+id/tv_kode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="123"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="MERK SEPEDA"/>
+
+        <TextView
+            android:id="@+id/tv_merk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Merk Sepeda"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="WARNA SEPEDA"/>
+
+        <TextView
+            android:id="@+id/tv_warna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Warna Sepeda"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="HARGA SEPEDA"/>
+
+        <TextView
+            android:id="@+id/tv_hargasewa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Harga Sewa"/>
+
+        <ImageView
+            android:id="@+id/iv_uploadsepeda"
+            android:layout_width="match_parent"
+            android:background="#41000000"
+            android:layout_height="160dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

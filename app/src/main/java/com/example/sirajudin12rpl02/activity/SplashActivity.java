@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.example.sirajudin12rpl02.R;
+import com.example.sirajudin12rpl02.activity.admin.AdminDashboardActivity;
 import com.example.sirajudin12rpl02.activity.admin.AdminUserActivity;
-import com.example.sirajudin12rpl02.activity.customer.CustomerActivity;
+import com.example.sirajudin12rpl02.activity.customer.DashboardActivity;
+import com.example.sirajudin12rpl02.activity.customer.SepedaActivity;
 import com.example.sirajudin12rpl02.helper.Config;
 
 public class SplashActivity extends AppCompatActivity {
@@ -57,12 +59,12 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 else {
                     if(role.equalsIgnoreCase("GR_ADMIN")){
-                        Intent intent1 = new Intent(getApplicationContext(), AdminUserActivity.class);
+                        Intent intent1 = new Intent(getApplicationContext(), AdminDashboardActivity.class);
                         startActivity(intent1);
                         finish();
                     }
                     else {
-                        Intent intent1 = new Intent(getApplicationContext(), CustomerActivity.class);
+                        Intent intent1 = new Intent(getApplicationContext(), DashboardActivity.class);
                         startActivity(intent1);
                         finish();
                     }
