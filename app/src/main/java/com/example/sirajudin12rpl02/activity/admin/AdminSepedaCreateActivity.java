@@ -231,7 +231,7 @@ public class AdminSepedaCreateActivity extends AppCompatActivity {
                         Bitmap selectedImage = (Bitmap) data.getExtras().get("uploadFile");
                         iv_sepeda.setImageBitmap(selectedImage);
                     }
-/
+//
                     break;
                 case 1:
                     if (resultCode == RESULT_OK && data != null) {
